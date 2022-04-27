@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+.header{
+    background-color: #17083D;
+    height: 120px;
+    width: 100%;
+}
+.navbar{
+    background-color: #5E0B8A;
+    height: 60px;
+    width: 100%;
+}
+.content{
+    /* background-color: red; */
+    min-height: 800px;
+    height: auto;
+    width: 100%;
+}
+.info{
+    height: 100px;
+    background-color: #5E0B8A;
+    width: 100%;
+}
+.footer{
+    background-color: #000;
+    height: 250px;
+    width: 100%;
+}
+
+.wrapper{
+    width: 970px;
+    margin: 0 auto;
+}
+
+.left-content{
+    height: auto;
+    min-height: 800px;
+    width: 270px;
+    /* background-color: red; */
+    float: left;
+}
+.right-content{
+    float: left;
+    height: auto;
+    min-height: 800px;
+    width: 700px;
+    /* background-color: green; */
+}
+.left-nav{
+    height: 360px;
+    width: 230px;
+    margin: 20px;
+    background-color: #FF5733;
+    border-radius: 10px;
+}
+.slider{
+    width: 660px;
+    height: 210px;
+    background-color: #000;
+    background-image: url("../images/slider.jfif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 20px;
+    border-radius: 10px 10px 0 0;
+}
+.slider-text{
+    color: #fff;
+    text-align: center;
+    padding-top: 50px;
+}
+.slider-text-small{
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+.products{
+    /* background-color: red; */
+    width: 660px;
+    height: 510px;
+    margin: 20px;
+}
+.pro-box{
+    width: 200px;
+    height: 250px;
+    margin: 5px 10px;
+    /* background-color: green; */
+    float: left;
+    border-radius: 10px;
+    box-shadow: 0 0 2px #000;
+}
+.pro-box:hover{
+    box-shadow: 0 0 10px #000;
+    cursor: pointer;
+    transition: 1s;
+
+}
