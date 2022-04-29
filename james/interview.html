@@ -1,0 +1,161 @@
+1. Why were client-side frameworks like Angular introduced?
+Ans : Back in the day, web developers used VanillaJS and jQuery to develop dynamic websites but, as the logic of one's website grew, the code became more and more tedious to maintain. For applications that use complex logic, developers had to put in extra effort to maintain separation of concerns for the app. Also, jQuery did not provide facilities for data handling across views.For tackling the above problems, client-side frameworks like Angular came into the picture, which made life easier for the developers by handling separation of concerns and dividing code into smaller bits of information (In the case of Angular, called Components).
+Client-side frameworks allow one to develop advanced web applications like Single-Page-Application. Not that we cannot develop SPAs using VanillaJS, but by doing so, the development process becomes slower.
+
+
+2. How does an Angular application work?
+Ans : Every Angular app consists of a file named angular.json. This file will contain all the configurations of the app. While building the app, the builder looks at this file to find the entry point of the application. Following is an image of the angular.json file.
+
+3. What are some of the advantages of Angular over other frameworks?
+Ans : Features that are provided out of the box - Angular provides a number of built-in features like,routing, state management, rxjs library and http servicesstraight out of the box. This means that one does not need tolook for the above stated features separately. They are allprovided with angular.
+Declarative UI - Angular uses HTML to render the UI of an application. HTML isa declarative language and is much easier to use than JavaScript.
+Long-term Google support - Google announced Long-term support for Angular. This means that Google plans to stick with Angular and further scale up its ecosystem.
+
+4. List out differences between AngularJS and Angular
+Ans : Architecture
+AngularJS uses MVC or Model-View-Controller architecture, where the Model contains the business logic, Controller processes information and View shows the information present in the Model.
+Angular replaces controllers with Components. Components are nothing but directives with a predefined template.
+Language
+AngularJS uses JavaScript language, which is a dynamically typed language.
+Angular uses TypeScript language, which is a statically typed language and is a superset of JavaScript. By using statically typed language, Angular provides better performance while developing larger applications.
+Mobile Support
+AngularJS does not provide mobile support.
+Angular is supported by all popular mobile browsers.
+Structure
+While developing larger applications, the process of maintaining code becomes tedious in the case of AngularJS.
+In the case of Angular, it is easier to maintain code for larger applications as it provides a better structure.
+Expression Syntax
+While developing an AngularJS application, a developer needs to remember the correct ng-directive for binding an event, or a property. Whereas in Angular, property binding is done using "[ ]" attribute and event binding is done using "( )" attribute.
+
+6. Explain string interpolation and property binding in Angular.
+Ans : String interpolation and property binding are parts of data-binding in Angular.
+Data-binding is a feature in angular, which provides a way to communicate between the component(Model) and its view(HTML template).
+Data-binding can be done in two ways, one-way binding and two-way binding.
+In Angular, data from the component can be inserted inside the HTML template. In one-way binding, any changes in the component will directly reflect inside the HTML template but, vice-versa is not possible. Whereas, it is possible in two-way binding.
+
+String interpolation and property binding allow only one-way data binding.
+String interpolation uses the double curly braces {{ }} to display data from the component. Angular automatically runs the expression written inside the curly braces, for example, {{ 2 + 2 }} will be evaluated by Angular and the output 4, will be displayed inside the HTML template. Using property binding, we can bind the DOM properties of an HTML element to a component's property. Property binding uses the square brackets [ ] syntax.
+
+7. What is TypeScript?
+TypeScript is a superset of JavaScript that offers excellent consistency. It is highly recommended, as it provides some syntactic sugar and makes the code base more comfortable to understand and maintain. Ultimately, TypeScript code compiles down to JavaScript that can run efficiently in any environment. 
+
+8. What is data binding? Which type of data binding does Angular deploy?
+Data binding is a phenomenon that allows any internet user to manipulate Web page elements using a Web browser. It uses dynamic HTML and does not require complex scripting or programming. We use data binding in web pages that contain interactive components such as forms, calculators, tutorials, and games. Incremental display of a webpage makes data binding convenient when pages have an enormous amount of data. 
+Angular uses the two-way binding. Any changes made to the user interface are reflected in the corresponding model state. Conversely, any changes in the model state are reflected in the UI state. This allows the framework to connect the DOM to the Model data via the controller. However, this approach affects performance since every change in the DOM has to be tracked.
+
+9. What are Single Page Applications (SPA)?
+Single-page applications are web applications that load once with new features just being mere additions to the user interface. It does not load new HTML pages to display the new page's content, instead generated dynamically. This is made possible through JavaScript's ability to manipulate the DOM elements on the existing page itself. A SPA approach is faster, thus providing a seamless user experience. 
+
+10. What are decorators in Angular? 
+Decorators are a design pattern or functions that define how Angular features work. They are used to make prior modifications to a class, service, or filter. Angular supports four types of decorators, they are:
+Class Decorators
+Property Decorators
+Method Decorators
+Parameter Decorators
+
+11. Mention some advantages of Angular.
+Some of the common advantages of Angular are - 
+
+MVC architecture - Angular is a full-fledged MVC framework. It provides a firm opinion on how the application should be structured. It also offers bi-directional data flow and updates the real DOM. 
+Modules: Angular consists of different design patterns like components, directives, pipes, and services, which help in the smooth creation of applications.
+Dependency injection: Components dependent on other components can be easily worked around using this feature. 
+Other generic advantages include clean and maintainable code, unit testing, reusable components, data binding, and excellent responsive experience.
+
+12. What are Templates in Angular?
+Angular Templates are written with HTML that contains Angular-specific elements and attributes. In combination with the model and controller's information, these templates are further rendered to provide a dynamic view to the user.
+
+13. What are Directives in Angular?
+Directives are attributes that allow the user to write new HTML syntax specific to their applications. They execute whenever the Angular compiler finds them in the DOM. Angular supports three types of directives.  
+
+Component Directives
+Structural Directives
+Attribute Directives 
+
+14. What is an AOT compilation? What are its advantages?
+The Ahead-of-time (AOT) compiler converts the Angular HTML and TypeScript code into JavaScript code during the build phase, i.e., before the browser downloads and runs the code.
+
+Some of its advantages are as follows. 
+
+Faster rendering
+Fewer asynchronous requests
+Smaller Angular framework download size
+Quick detection of template errors
+Better security
+
+15. What are Components in Angular?
+Components Heirarchy
+
+Components are the basic building blocks of the user interface in an Angular application. Every component is associated with a template and is a subset of directives. An Angular application typically consists of a root component, which is the AppComponent, that then branches out into other components creating a hierarchy.
+
+16. What are Pipes in Angular? 
+angular pipes
+
+Pipes are simple functions designed to accept an input value, process, and return as an output, a transformed value in a more technical understanding. Angular supports several built-in pipes. However, you can also create custom pipes that cater to your needs. 
+
+Some key features include: 
+
+Pipes are defined using the pipe “|” symbol. 
+Pipes can be chained with other pipes.
+Pipes can be provided with arguments by using the colon (:) sign.
+
+17. What are Pipes in Angular? 
+angular pipes
+
+Pipes are simple functions designed to accept an input value, process, and return as an output, a transformed value in a more technical understanding. Angular supports several built-in pipes. However, you can also create custom pipes that cater to your needs. 
+
+Some key features include: 
+
+Pipes are defined using the pipe “|” symbol. 
+Pipes can be chained with other pipes.
+Pipes can be provided with arguments by using the colon (:) sign.
+
+18. What are filters in Angular? Name a few of them.
+Filters are used to format an expression and present it to the user. They can be used in view templates, controllers, or services. Some inbuilt filters are as follows. 
+
+date - Format a date to a specified format.
+filter - Select a subset of items from an array.
+Json - Format an object to a JSON string.
+limitTo -  Limits an array/string, into a specified number of elements/characters.
+lowercase - Format a string to lowercase.
+
+19. What is view encapsulation in Angular?
+View encapsulation defines whether the template and styles defined within the component can affect the whole application or vice versa. Angular provides three encapsulation strategies:
+
+Emulated - styles from the main HTML propagate to the component.
+Native - styles from the main HTML do not propagate to the component. 
+None - styles from the component propagate back to the main HTML and therefore are visible to all components on the page.
+
+20. What are controllers?
+AngularJS controllers control the data of AngularJS applications. They are regular JavaScript Objects. The ng-controller directive defines the application controller.
+
+
+21. Explain the lifecycle hooks in Angular
+In Angular, every component has a lifecycle. Angular creates and renders these components and also destroys them before removing them from the DOM. This is achieved with the help of lifecycle hooks. Here's the list of them - 
+
+ngOnChanges() - Responds when Angular sets/resets data-bound input properties.
+ngOnInit() - Initialize the directive/component after Angular first displays the data-bound properties and sets the directive/component's input properties/
+ngDoCheck() - Detect and act upon changes that Angular can't or won't detect on its own.
+ngAfterContentInit() - Responds after Angular projects external content into the component's view.
+ngAfterContentChecked() - Respond after Angular checks the content projected into the component.
+ngAfterViewInit() - Respond after Angular initializes the component's views and child views.
+ngAfterViewChecked() - Respond after Angular checks the component's views and child views.
+ngOnDestroy - Cleanup just before Angular destroys the directive/component.
+
+22. What is String Interpolation in Angular?
+String Interpolation is a one-way data-binding technique that outputs the data from TypeScript code to HTML view. It is denoted using double curly braces. This template expression helps display the data from the component to the view. 
+
+{{ data }}
+
+23. What are Template statements?
+Template statements are properties or methods used in HTML for responding to user events. With these template statements, the application that you create or are working on, can have the capability to engage users through actions such as submitting forms and displaying dynamic content.
+
+For example, 
+
+<button (click)="deleteHero()">Delete hero</button>
+
+The template here is deleteHero. The method is called when the user clicks on the button.
+
+24. What is the difference between AOT and JIT? 
+Ahead of Time (AOT) compilation converts your code during the build time before the browser downloads and runs that code. This ensures faster rendering to the browser. To specify AOT compilation, include the --aot option with the ng build or ng serve command. 
+
+The Just-in-Time (JIT) compilation process is a way of compiling computer code to machine code during execution or run time. It is also known as dynamic compilation. JIT compilation is the default when you run the ng build or ng serve CLI commands. 
