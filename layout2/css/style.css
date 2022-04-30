@@ -1,0 +1,107 @@
+body{
+    /* background-color: red; */
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+.header{
+    height: 50px;
+    width: 100%;
+    background-color: #03AEF3;
+}
+.navbar{
+    height: 100px;
+    width: 100%;
+    background-color: #373C50;
+}
+.slider{
+    height: 400px;
+    width: 100%;
+    background-color: #000;
+}
+.info{
+    height: 200px;
+    width: 100%;
+    background-color: #93E1F8;
+}
+.content{
+    height: auto;
+    min-height: 600px;
+    width: 100%;
+    
+}
+.sub{
+    height: 150px;
+    width: 100%;
+    background-color: #73D5FC;
+}
+.review{
+    height: 250px;
+    width: 100%;
+
+}
+.footer{
+    background-color: #1B212B;
+    height: 300px;
+    width: 100%;
+}
+.bottom-footer{
+    height: 100px;
+    width: 100%;
+    background-color: #000;
+}
+.wrapper{
+    width: 970px;
+    margin: 0 auto;
+}
+.left-header{
+    height: 50px;
+    width: 500px;
+    /* background-color: red; */
+    float: left;
+}
+.right-header{
+    float: right;
+    height: 50px;
+    width: 200px;
+    /* background-color: green; */
+}
+.right-header a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    padding: 19px 10px;
+}
+
+
+.left-header p{
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+.logo{
+    height: 100px;
+    width: 250px;
+    /* background-color: red; */
+    float: left;
+}
+.top-nav-bar{
+    height: 100px;
+    width: 720px;
+    /* background-color: green; */
+    float: right;
+}
+.logo h1{
+    color: #28A5C3;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-style: italic;
+}
+.logo p{
+    color: #fff;
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 14px;
+}
