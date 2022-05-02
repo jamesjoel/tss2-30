@@ -67,3 +67,11 @@ body{
     font-size: 13px;
     margin: 22px 0px 0px -7px;
 }
+.right-header a{
+    color: #E6FFFF;
+    text-decoration: none;
+    padding: 18px 21px;
+    font-size: 12px;
+    margin: -1px;
+    display: inline-block;
+}
