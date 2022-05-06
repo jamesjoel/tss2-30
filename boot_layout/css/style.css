@@ -1,0 +1,63 @@
+body{
+    background-color: #112B3C;
+}
+.bg-orange{
+    background-color: #F66B0E;
+}
+.bg-gray{
+    background-color: #EFEFEF;
+}
+
+
+
+#my-nav .navbar-brand{
+    font-size: 1.50rem;
+    font-weight: bold;
+}
+#my-nav #menu .nav .nav-item .nav-link{
+    color: #FFF;
+}
+#my-nav #menu .nav .nav-item .nav-link:hover{
+    background-color: #112B3C;
+}
+#my-nav #menu .nav .nav-item .dropdown-menu{
+    background-color: #205375;
+}
+#my-nav #menu .nav .nav-item .dropdown-menu .dropdown-item{
+    color: #fff;
+}
+#my-nav #menu .nav .nav-item .dropdown-menu .dropdown-item:hover{
+    color: #fff;
+    background-color: #F66B0E;
+}
+
+#top-nav p{
+    font-size: 14px;
+    color: #112B3C;
+}
+#top-nav .nav .nav-item .nav-link{
+    font-size: 14px;
+    color: #112B3C;
+}
+#top-nav .nav .nav-item .nav-link:hover{
+    text-decoration: underline;
+}
+.slider{
+    background-image: url('../images/slider.jpg');
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#content .col-md-3 .list-group .list-group-item{
+    /* background-color: #112B3C;
+    border: none;
+    box-shadow: none; */
+    color: #112B3C;
+}
+#content .col-md-3 .list-group .list-group-item:hover{
+    text-decoration: none;
+    background-color: #F66B0E;
+    color: #fff;
+}
+
