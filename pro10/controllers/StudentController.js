@@ -8,4 +8,11 @@ routes.get("/", (req, res)=>{
 });
 
 
+routes.post("/save", (req, res)=>{
+    req.body.age = parseInt(req.body.age);
+    req.body.contact = parseInt(req.body.contact);
+    console.log(req.body);
+})
+
+
 module.exports = routes;

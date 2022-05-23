@@ -195,7 +195,10 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem; 
+  color: #000 !important;
+  font-weight: bold !important;
+}
 
 button {
   border-radius: 0; }
