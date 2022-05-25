@@ -72,8 +72,16 @@
 								
 								
 								<li <% if(url == "/contact"){ %> class='active'  <% } %>><a href="/contact">Contact</a></li>
-								<li <% if(url == "/student"){ %> class='active'  <% } %>><a href="/student">Student</a></li>
 								
+								<li class="has-dropdown" <% if(url == "/student"){ %> class='active'  <% } %>>
+									<a href="#">Student</a>
+									<ul class="dropdown">
+										<li><a href="/student">Add</a></li>
+										<li><a href="/student/list">List</a></li>
+										
+										
+									</ul>
+								</li>
 							</ul>
 						</div>
 					</div>
