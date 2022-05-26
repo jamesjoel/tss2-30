@@ -39,6 +39,20 @@ routes.post("/save", (req, res)=>{
     
 })
 
+routes.post("/update/:a", (req, res)=>{
+    // console.log(req.params.a);
+    var id = req.params.a;
+    var objid = mongodb.ObjectId(id);
+    // console.log(req.body);
+    MongoClient.connect(database.dbUrl, (err, con)=>{
+        var db = con.db(database.dbName);
+        db.collection("student").updateMany({ _id : objid }, { $set : req.body }, (err)=>{
+            res.redirect("/student/list");
+        })
+    })
+})
+
+
 
 routes.get("/list", (req, res)=>{
 
@@ -70,6 +84,36 @@ routes.get("/detail/:a", (req, res)=>{
         })
     })
 
+
+})
+routes.get("/delete/:a", (req, res)=>{
+    // console.log(req.params.a);
+    var id = req.params.a;
+    var objid = mongodb.ObjectId(id);
+    MongoClient.connect(database.dbUrl, (err, con)=>{
+        var db = con.db(database.dbName);
+        db.collection("student").deleteMany({ _id : objid }, (err)=>{
+            res.redirect("/student/list");
+        })
+    })
+})
+routes.get("/edit/:a", (req, res)=>{
+    var id = req.params.a;
+    var objid = mongodb.ObjectId(id);
+
+
+    MongoClient.connect(database.dbUrl, (err, con)=>{
+        var db = con.db(database.dbName);
+        db.collection("student").find({ _id  : objid}).toArray((err, result)=>{
+
+            // console.log(result);
+            // return;
+
+            var url = "/student";
+            var obj = {url : url, info : result[0]};
+            res.render("student/edit", obj);
+        })
+    })
 
 })
 
