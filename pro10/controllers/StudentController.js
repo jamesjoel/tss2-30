@@ -7,9 +7,15 @@ const database = require("../config/database");
 
 
 routes.get("/", (req, res)=>{
-    var url = "/student";
-    var obj = {url : url};
-    res.render("student/index", obj);
+    MongoClient.connect(database.dbUrl, (err, con)=>{
+        var db = con.db(database.dbName);
+        db.collection("city").find().toArray((err, result)=>{
+
+            var url = "/student";
+            var obj = {url : url, city : result };
+            res.render("student/index", obj);
+        })
+    })
     
 });
 
@@ -104,14 +110,17 @@ routes.get("/edit/:a", (req, res)=>{
 
     MongoClient.connect(database.dbUrl, (err, con)=>{
         var db = con.db(database.dbName);
-        db.collection("student").find({ _id  : objid}).toArray((err, result)=>{
+        db.collection("student").find({ _id  : objid}).toArray((err, result1)=>{
 
-            // console.log(result);
-            // return;
+            
+            db.collection("city").find().toArray((err, result2)=>{
 
-            var url = "/student";
-            var obj = {url : url, info : result[0]};
-            res.render("student/edit", obj);
+                var url = "/student";
+                var obj = {url : url, info : result1[0], city : result2};
+                res.render("student/edit", obj);
+            })
+            
+
         })
     })
 

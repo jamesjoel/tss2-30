@@ -31,8 +31,18 @@ app.use(["/about", "/contact"], (req, res)=>{
 
 
 
+// console.log("FIRST ----------");
 
-const port = process.env.PORT || 3000;
-app.listen(port, ()=>{
+
+// const port = process.env.PORT || 3000;
+// app.listen(port, ()=>{
+//     // console.log("server running");
+//     console.log("SECOND ----------");
+//     console.log("THIRD ----------");
+// });
+
+
+app.listen(3000, (){
+
     console.log("server running");
 });
