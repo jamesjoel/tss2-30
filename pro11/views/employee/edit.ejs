@@ -1,0 +1,45 @@
+
+<%- include('../header') %>
+	
+		
+        
+        
+<div class="container" style="min-height:700px">
+    <form action="/employee/update/<%= info._id %>" method="post">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h4 class="text-center">Update Employee</h4>
+            <div class="form-group">
+                <label for="">Full Name</label>
+                <input type="text" name="full_name" value="<%= info.full_name %>" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Salary</label>
+                <input type="text" name="salary" value="<%= info.salary %>" class="form-control">
+            </div>
+            
+            
+            
+
+            <div class="form-group">
+                <label for="">Gender</label>
+                <Br />
+                Male<input type="radio" <% if(info.gender=='male'){ %> checked <% } %> name="gender" value="male">
+                Female<input type="radio" <% if(info.gender=='female'){ %> checked <% } %> name="gender" value="female">
+            </div>
+            <div class="form-group">
+                <label for="">Contact</label>
+                <input type="text" value="<%= info.contact %>" class="form-control" name="contact">
+            </div>
+            <Br />
+            <Br />
+            <input type="submit" value="Update" class="btn btn-primary" />
+        </div>
+    </div>
+    </form>
+
+</div>
+
+
+
+<%- include('../footer') %>
