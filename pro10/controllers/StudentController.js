@@ -1,6 +1,26 @@
 const routes = require("express").Router();
 const mongodb = require("mongodb");
 
+const MongoClient = mongodb.MongoClient;
+const database = require("../config/database");
+
+
+routes.get("/demo", (req, res)=>{
+    MongoClient.connect(database.dbUrl, (err, con)=>{
+        var db = con.db(database.dbName);
+        db.collection("city").find().toArray((err, result)=>{
+            result.forEach((x)=>{
+                x.id = parseInt(x.id);
+                db.collection("city").updateMany({ _id : mongodb.ObjectId(x._id)}, { $set : x }, (err)=>{
+                    if(err){
+                        console.log(err);
+                        return;
+                    }
+                })
+            })
+        })
+    })
+})
 
 
 
@@ -8,11 +28,15 @@ const mongodb = require("mongodb");
 routes.get("/", (req, res)=>{
     MongoClient.connect(database.dbUrl, (err, con)=>{
         var db = con.db(database.dbName);
-        db.collection("city").find().toArray((err, result)=>{
+        db.collection("city").find().toArray((err, result1)=>{
 
-            var url = "/student";
-            var obj = {url : url, city : result };
-            res.render("student/index", obj);
+            db.collection("city").distinct("state", (err, result2)=>{
+                // console.log(result2);
+                var url = "/student";   
+                var obj = {url : url, city : result1, state : result2 };
+                res.render("student/index", obj);
+            })
+
         })
     })
     

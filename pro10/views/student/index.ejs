@@ -22,6 +22,19 @@
                 <textarea class="form-control" name="address"></textarea>
             </div>
             <div class="form-group">
+                <label>State</label>
+                <select class="form-control">
+                    <option>Select</option>
+                    <% state.forEach((x)=>{ %>
+                        <option><%= x %></option>
+                    <% }) %>
+                </select>
+            </div>
+
+
+
+
+            <div class="form-group">
                 <label for="">City</label>
                 <select class="form-control" name="city">
                     <option>Select</option>
