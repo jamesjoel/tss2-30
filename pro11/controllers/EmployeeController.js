@@ -1,6 +1,8 @@
 const routes = require("express").Router();
 const Employee = require("../models/Employee");
 const mongodb = require("mongodb");
+const fs = require("fs");
+const str = require("random-string-gen");
 
 routes.get("/", (req, res)=>{
     var url = "/employee";
@@ -36,11 +38,29 @@ routes.get("/edit/:a", (req, res)=>{
 })
 
 routes.post("/save", (req, res)=>{
+    var data = `
+        Full Name : ${req.body.full_name} \n\n
+        Salary : ${req.body.salary}\n\n
+        Gender : ${req.body.gender}\n\n
+        Contact : ${req.body.contact}\n\n
+        `;
 
-    req.body.salary = parseInt(req.body.salary);
-    Employee.save(req.body, (err)=>{
-        res.redirect("/employee");
+        var filename = str()+".txt";
+    
+    fs.appendFile("assets/"+filename, data, (err)=>{
+        if(err){
+            console.log(err);
+            return;
+        }
+        
+        req.body.filename = filename;
+        req.body.salary = parseInt(req.body.salary);
+        Employee.save(req.body, (err)=>{
+            res.redirect("/employee");
+        })
     })
+
+
 })
 
 routes.post("/update/:a", (req, res)=>{

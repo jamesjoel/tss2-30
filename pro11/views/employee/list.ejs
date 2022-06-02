@@ -30,6 +30,7 @@
                     <th>Gender</th>
                     <th>Edit</th>
                     <th>Delete</th>
+                    <th>Download</th>
                 </tr>
 
                 <% result.forEach((x, n)=>{ %>
@@ -44,6 +45,7 @@
                         
                         <td><a href="/employee/edit/<%= x._id %>" class="btn btn-warning btn-sm">Edit</a></td>
                         <td><a href="/employee/delete/<%= x._id %>" class="btn btn-danger btn-sm">Delete</a></td>
+                        <td><a href="/<%= x.filename %>" download class="btn btn-info btn-sm">Download</a></td>
                     </tr>
                 <% }) %>
             </table>
