@@ -1,0 +1,19 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Event in Angular (Event Binding)</h2>
+            <div style="background-color: {{ bgColor }}; height : {{ h }}px; width : {{ w }}px;"></div>
+            <button class="btn btn-info" (click)="demo1('Indore')" (dblclick)="demo2()">OK</button>
+            <Br />
+            <Br />
+            <input type="text" (keyup)="demo4()" (keydown)="demo3()" style="background-color: {{ bgColor1 }};"/>
+
+            <Br />
+            <Br />
+            <p (copy)="demo5()" (contextmenu)="demo10()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, officia vero. Soluta laborum ea vitae reprehenderit rerum quas fugit molestias, quod doloribus ex at, corporis excepturi numquam mollitia? Fuga, in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt recusandae, odio voluptates provident eaque fuga minima ea adipisci eligendi omnis vel ab dolorem quia, voluptatum ut quis placeat libero molestias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, ex, illo reiciendis laboriosam excepturi reprehenderit itaque sed, libero eaque voluptas corrupti unde fugit totam dicta dolores necessitatibus. Excepturi, voluptas iure.</p>
+
+            <b>{{ msg }}</b>
+
+        </div>
+    </div>
+</div>
