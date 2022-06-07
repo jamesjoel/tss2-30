@@ -1,0 +1,57 @@
+<%- include("../header") %>
+
+	<div class="product-section mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-title">	
+						<h3><span class="orange-text">Edit</span> Teachers</h3>
+						<button class="btn btn-info" data-toggle="modal" data-target="#addModal">Add Teacher</button>
+					</div>
+				</div>
+			</div>
+
+            <form action="/teacher/update/<%= result._id %>" method="post">
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" value="<%= result.name %>" name="name"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Salary</label>
+                        <input type="text" class="form-control" value="<%= result.salary %>" name="salary"/>
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <select class="form-control" name="city">
+                            <option>Select</option>
+                            <option <% if(result.city == "Indore"){ %> selected <% } %>>Indore</option>
+                            <option <% if(result.city == "Pune"){ %> selected <% } %>>Pune</option>
+                            <option <% if(result.city == "Delhi"){ %> selected <% } %>>Delhi</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <Br />
+                        Male <input type="radio"  <% if(result.gender == "male"){ %> checked <% } %> name="gender" value="male"/>
+                        Female <input type="radio"  <% if(result.gender == "female"){ %> checked <% } %> name="gender" value="female"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea class="form-control" name="address"><%= result.address %></textarea>
+                    </div>
+                    <br />
+                    <Br />
+                    <input type="submit" value="Update" class="btn btn-success" />
+                    <a href="/teacher" class="btn btn-warning">Back</a>
+				</div>
+			</div>
+        </form>
+		</div>
+	</div>
+
+
+	
+
+	<%- include("../footer") %>
